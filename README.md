@@ -20,3 +20,6 @@ While this project may appear to purely involve game development, it also heavil
 
 https://github.com/user-attachments/assets/9060865d-954d-4613-80e5-76894efd294e
 
+### Challenges & Learnings
+
+This project had multiple challenges. The biggest challenge was implementing the game while making sure that it ran at stable framerates. This was solved through the use of dynamic programming techniques. Other challenges included trouble with tuning the accelerometer support, which was resolved through implementation of weights and minimum & maximum values from the sensor.
