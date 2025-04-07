@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/myLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.GameFragment">
+
+    <com.ys.mydynamicapp.GameSurfaceView
+        android:id="@+id/gameView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="102dp"
+        tools:layout_editor_absoluteY="34dp" />
+
+    <ImageButton
+        android:id="@+id/pausePlayButton"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/pause_play_button"
+        android:scaleType="fitXY"
+        android:src="@drawable/pause_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/restartButton"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="8dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/restart"
+        android:scaleType="fitXY"
+        android:src="@drawable/retry_button"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@id/pausePlayButton"
+        app:layout_constraintTop_toTopOf="@id/pausePlayButton" />
+
+    <ImageButton
+        android:id="@+id/rightArrowButton"
+        style="@style/DirectionalButton"
+        android:layout_marginEnd="8dp"
+
+        android:contentDescription="@string/move_right_button"
+        android:src="@drawable/right_arrow_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageButton
+        android:id="@+id/leftArrowButton"
+        style="@style/DirectionalButton"
+        android:layout_marginStart="8dp"
+
+        android:contentDescription="@string/move_left_button"
+        android:src="@drawable/left_arrow_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/waterButton"
+        style="@style/DirectionalButton"
+
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/watering_button"
+        android:src="@drawable/water_button"
+        app:layout_constraintBottom_toTopOf="@+id/rightArrowButton"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/waterTankLayout"
+        android:layout_width="50dp"
+
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/leftArrowButton"
+        app:layout_constraintEnd_toEndOf="@+id/pausePlayButton"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/pausePlayButton"
+        app:layout_constraintTop_toBottomOf="@id/pausePlayButton">
+
+        <ProgressBar
+            android:id="@+id/waterLevelBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+
+            android:alpha="0.9"
+            android:max="100"
+            android:progress="100"
+            android:progressDrawable="@drawable/progress_bar_vertical" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/gameStopwatch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:textColor="@color/black"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/pausePlayButton" />
+
+    <TextView
+        android:id="@+id/fpsCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@id/restartButton"
+        app:layout_constraintLeft_toRightOf="@id/pausePlayButton"
+        app:layout_constraintTop_toTopOf="@id/pausePlayButton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

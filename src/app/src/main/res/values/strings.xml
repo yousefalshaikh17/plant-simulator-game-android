@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">PlantSim</string>
+    <string name="pause_play_button">Pause/Play</string>
+    <string name="move_left_button">Move Left</string>
+    <string name="watering_button">Pour</string>
+    <string name="move_right_button">Move Right</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fps_message">FPS: %d</string>
+    <string name="stopwatch_time">%s:%s.%s</string>
+    <string name="leave">Leave</string>
+    <string name="start_game">Start Game</string>
+    <string name="settings">Settings</string>
+    <string name="retry">retry</string>
+    <string name="game_over">Game Over!</string>
+    <string name="back">back</string>
+    <string name="placeholder">Placeholder</string>
+    <string name="new_high_score">New High Score</string>
+
+    // Awful performance strings
+    <string name="awful1">Did you even try?</string>
+    <string name="awful2">Disappointing.</string>
+    <string name="awful3">Yikes…</string>
+    <string name="awful_high_score">You shouldn\'t be proud of this high score…</string>
+
+    // Moderate performance strings
+    <string name="moderate1">At least you tried…?</string>
+    <string name="moderate2">Better than nothing.</string>
+    <string name="moderate3">You\'ll do better next time!</string>
+    <string name="moderate_high_score">Oh nice, a high score!</string>
+
+
+    // Great performance strings
+    <string name="great1">impressive!</string>
+    <string name="great2">You\'ll make for a great gardener!</string>
+    <string name="great3">Wow!</string>
+    <string name="great_high_score">A new high score?? Wow!</string>
+    <string name="restart">Restart</string>
+    <string name="show_fps_counter">Show FPS Counter</string>
+    <string name="use_accelerometer">Use Accelerometer</string>
+    <string name="plant_simulator_logo">Plant Simulator Logo</string>
+
+</resources>
